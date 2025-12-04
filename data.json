@@ -159,11 +159,15 @@
   "address": "online",
   "category": "Онлайн-магазини",
   "site": "https://www.instagram.com/syaivo_v_domi",
+  "lat": 50.44247,
+  "lng": 30.52085
 },
 {
   "name": "Dushka Cosmetics",
   "address": "online",
   "category": "Онлайн-магазини",
   "site": "https://www.instagram.com/dushka_cosmetics",
+  "lat": 50.44247,
+  "lng": 30.52085
 }
 ]
