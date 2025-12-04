@@ -154,4 +154,20 @@
     "lat": 49.99243,
     "lng": 33.02833
 }
+  {
+  "name": "Syaivo v domi",
+  "address": "online",
+  "category": "Онлайн-магазини",
+  "site": "https://www.instagram.com/syaivo_v_domi",
+  "lat": null,
+  "lng": null
+},
+{
+  "name": "Dushka Cosmetics",
+  "address": "online",
+  "category": "Онлайн-магазини",
+  "site": "https://www.instagram.com/dushka_cosmetics",
+  "lat": null,
+  "lng": null
+}
 ]
