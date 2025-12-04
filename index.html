@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Карта магазинів Полтавської області</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Карта закладів Полтавської області</h1>
+  <p>Аптеки • Автозапчастини • Заправки • Магазини • Ресторани</p>
+</header>
+
+<div class="filter-container">
+  <select id="categoryFilter">
+    <option value="all">Всі категорії</option>
+    <option value="Аптека">Аптеки</option>
+    <option value="Автозапчастини">Автозапчастини</option>
+    <option value="АЗС">Заправки</option>
+    <option value="Магазин">Магазини</option>
+    <option value="Ресторан">Ресторани</option>
+  </select>
+</div>
+
+<div id="map"></div>
+
+<h2 class="list-title">Список закладів</h2>
+<div id="list"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
