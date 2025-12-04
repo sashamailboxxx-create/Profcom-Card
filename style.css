@@ -1,60 +1,91 @@
+/* Основний фон */
 body {
   margin: 0;
-  background: #0f0f0f;
+  background: #0c1020; /* темно-синій фон */
   font-family: Arial, sans-serif;
-  color: #fff;
+  color: #e6e6e6;
 }
 
+/* Шапка */
 header {
   text-align: center;
   padding: 25px 10px;
-  background: #181818;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  background: #0a0e1a; /* глибокий синій */
+  box-shadow: 0 3px 15px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(80,120,255,0.2);
 }
 
 header h1 {
   margin: 0;
   font-size: 28px;
+  color: #dce6ff;
 }
 
+/* Контейнер фільтра */
 .filter-container {
   padding: 15px;
-  background: #151515;
+  background: #0a0e1a;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid rgba(80,120,255,0.15);
 }
 
+/* Select — ТЕМНО-СИНІЙ СТИЛЬ */
 select {
-  padding: 10px 15px;
-  background: #222;
-  color: white;
-  border: 1px solid #444;
-  border-radius: 6px;
+  padding: 12px 18px;
+  background: #1a2440; 
+  color: #dce6ff;
+  border: 1px solid #3b4f8f;
+  border-radius: 8px;
   font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(30,58,138,0.25);
 }
 
+select:hover {
+  background: #22315c;
+  border-color: #5a78d1;
+}
+
+/* Карта */
 #map {
   height: 500px;
   width: 100%;
+  border-top: 1px solid rgba(80,120,255,0.15);
 }
 
+/* Тайтл списку */
 .list-title {
   text-align: center;
   margin-top: 25px;
+  color: #c8d4ff;
+  font-size: 22px;
 }
 
+/* Список */
 #list {
   padding: 15px;
 }
 
+/* Картка елемента */
 .item {
-  background: #181818;
-  border: 1px solid #333;
+  background: #121a33; 
+  border: 1px solid rgba(80,120,255,0.25);
   padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
 
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
+}
+
+/* Виділення назви */
 .item b {
-  color: #4fa3ff;
+  color: #7ab0ff;
+  font-size: 17px;
 }
