@@ -1,60 +1,63 @@
-const map = L.map('map').setView([49.588, 34.551], 9);
+let map = L.map('map').setView([49.5883, 34.5514], 11);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
 }).addTo(map);
 
-let markers = [];
-let shopData = [];
+const listContainer = document.getElementById("list");
+const categoryFilter = document.getElementById("categoryFilter");
+let allMarkers = [];
+let loadedData = [];
 
-fetch('data.json')
-  .then(r => r.json())
+// ----------------------
+//  Завантаження JSON
+// ----------------------
+fetch("data.json")
+  .then(response => response.json())
   .then(data => {
-    shopData = data;
-    renderMarkers(data);
-    renderList(data);
+    loadedData = data;
+    renderAll(data);
   });
 
-function renderMarkers(data) {
-  markers.forEach(m => map.removeLayer(m));
-  markers = [];
+// ----------------------
+//  Рендер списку + карти
+// ----------------------
+function renderAll(data) {
+  listContainer.innerHTML = "";
+  allMarkers.forEach(m => map.removeLayer(m));
+  allMarkers = [];
 
-  data.forEach(shop => {
-    if (shop.lat && shop.lng) {
-      const marker = L.marker([shop.lat, shop.lng])
-        .addTo(map)
-        .bindPopup(`<b>${shop.name}</b><br>${shop.address}<br>${shop.category}`);
-
-      markers.push(marker);
-    }
-  });
-}
-
-function renderList(data) {
-  const list = document.getElementById("list");
-  list.innerHTML = "";
-
-  data.forEach(shop => {
-    list.innerHTML += `
-      <div class="item">
-        <b>${shop.name}</b><br>
-        ${shop.address}<br>
-        Категорія: ${shop.category}
-      </div>
+  data.forEach(item => {
+    // ---- Рендер списку ----
+    const entry = document.createElement("div");
+    entry.className = "list-item";
+    entry.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.address}</p>
+      <p><strong>Категорія:</strong> ${item.category}</p>
+      ${item.site ? `<a href="${item.site}" target="_blank">Перейти на сайт</a>` : ""}
     `;
+    listContainer.appendChild(entry);
+
+    // ---- Якщо магазин онлайн — не додаємо на карту ----
+    if (!item.lat || !item.lng) return;
+
+    // ---- Додаємо маркер ----
+    let marker = L.marker([item.lat, item.lng]).addTo(map);
+    marker.bindPopup(`<b>${item.name}</b><br>${item.address}`);
+    allMarkers.push(marker);
   });
 }
 
-// Фільтр
-document.getElementById("categoryFilter").addEventListener("change", e => {
-  const val = e.target.value;
+// ----------------------
+//  Фільтр по категорії
+// ----------------------
+categoryFilter.addEventListener("change", () => {
+  const selected = categoryFilter.value;
 
-  if (val === "all") {
-    renderMarkers(shopData);
-    renderList(shopData);
-  } else {
-    const filtered = shopData.filter(s => s.category === val);
-    renderMarkers(filtered);
-    renderList(filtered);
-  }
+  const filtered = selected === "all"
+    ? loadedData
+    : loadedData.filter(item => item.category === selected);
+
+  renderAll(filtered);
 });
