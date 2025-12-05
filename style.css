@@ -164,3 +164,12 @@ select:hover {
   opacity: 0.85;
   margin-top: 5px;
 }
+.btn-link {
+  color: #4da3ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
