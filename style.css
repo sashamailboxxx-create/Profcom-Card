@@ -199,3 +199,35 @@ select:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 136, 204, 0.55);
 }
+
+
+
+
+/* Кнопки соцмереж */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background: #1e2a44;
+    padding: 6px 12px;
+    border-radius: 8px;
+
+    color: #8cbcff;         /* світло-синій текст */
+    font-weight: 500;
+    font-size: 14px;
+
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+/* Наведення */
+.btn-link:hover {
+    background: #274065;
+    color: #ffffff;
+}
+
+/* Іконка всередині */
+.btn-link span.icon {
+    font-size: 16px;
+}
