@@ -239,3 +239,39 @@ select:hover {
   box-shadow: 0 6px 15px rgba(0, 136, 204, 0.55);
 }
 
+/* Стиль кастомного popup */
+.leaflet-popup-content-wrapper {
+  background: #0e1b34 !important; /* темно-синій */
+  color: #fff !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  border: 1px solid #1f3b70;
+}
+
+.leaflet-popup-tip {
+  background: #0e1b34 !important;
+  border: 1px solid #1f3b70 !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 15px !important;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Назва магазину */
+.popup-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #4fa3ff;
+  margin-bottom: 5px;
+}
+
+/* Категорія */
+.popup-category {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 5px;
+}
+
