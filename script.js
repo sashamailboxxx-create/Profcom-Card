@@ -61,9 +61,22 @@ function renderAll(data) {
         <div class="address">${escapeHtml(item.address)}</div>
         <div class="cat"><strong>Категорія:</strong> ${escapeHtml(item.category)}</div>
 
-        ${item.instagram ? `<div><a href="${escapeAttr(item.instagram)}" target="_blank">Instagram</a></div>` : ''}
-        ${item.phone ? `<div><a href="tel:${escapeAttr(item.phone)}">Телефон</a></div>` : ''}
-        ${item.site ? `<div><a href="${escapeAttr(item.site)}" target="_blank">Сайт</a></div>` : ''}
+        ${item.instagram ? `
+            <a href="${escapeAttr(item.instagram)}" 
+               target="_blank" 
+               class="btn-link"><span class="icon">📸</span> Instagram</a>` 
+            : ''}
+
+        ${item.phone ? `
+            <a href="tel:${escapeAttr(item.phone)}" 
+               class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
+            : ''}
+
+        ${item.site ? `
+            <a href="${escapeAttr(item.site)}" 
+               target="_blank" 
+               class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
+            : ''}
       </div>
     `;
 
@@ -85,18 +98,18 @@ function renderAll(data) {
         ${item.instagram ? `
             <a href="${escapeAttr(item.instagram)}" 
                target="_blank" 
-               class="popup-btn popup-btn-instagram">Instagram</a>` 
+               class="btn-link"><span class="icon">📸</span> Instagram</a><br>` 
             : ''}
 
         ${item.phone ? `
             <a href="tel:${escapeAttr(item.phone)}" 
-               class="popup-btn popup-btn-phone">Подзвонити</a>` 
+               class="btn-link"><span class="icon">📞</span> Подзвонити</a><br>` 
             : ''}
 
         ${item.site ? `
             <a href="${escapeAttr(item.site)}" 
                target="_blank" 
-               class="popup-btn popup-btn-site">Сайт</a>` 
+               class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
             : ''}
       </div>
     `);
