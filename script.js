@@ -114,28 +114,14 @@ function escapeAttr(url) {
   if (!url) return "";
   return url.replace(/"/g, "%22");
 }
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(partner => {
-      // Створення маркера тільки якщо є координати
-      if (partner.lat && partner.lng) {
-        const marker = L.marker([partner.lat, partner.lng]).addTo(map);
+marker.bindPopup(`
+  <div style="font-size:14px; line-height:1.4;">
+    <strong>${escapeHtml(item.name)}</strong><br>
+    ${escapeHtml(item.address)}<br>
+    <b>Категорія:</b> ${escapeHtml(item.category)}<br><br>
 
-        // HTML попапа
-        const popupContent = `
-          <div style="font-size:14px; line-height:1.4;">
-            <strong>${partner.name}</strong><br>
-            ${partner.address}<br>
-            <b>Категорія:</b> ${partner.category}<br><br>
-
-            ${partner.instagram ? `<a href="${partner.instagram}" target="_blank" class="btn-link">Instagram</a><br>` : ''}
-            ${partner.phone ? `<a href="tel:${partner.phone}" class="btn-link">Подзвонити</a><br>` : ''}
-            ${partner.website ? `<a href="${partner.website}" target="_blank" class="btn-link">Сайт</a><br>` : ''}
-          </div>
-        `;
-
-        marker.bindPopup(popupContent);
-      }
-    });
-  });
+    ${item.instagram ? `<a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">Instagram</a><br>` : ''}
+    ${item.phone ? `<a href="tel:${escapeAttr(item.phone)}" class="btn-link">Подзвонити</a><br>` : ''}
+    ${item.site ? `<a href="${escapeAttr(item.site)}" target="_blank" class="btn-link">Сайт</a><br>` : ''}
+  </div>
+`);
