@@ -28,7 +28,7 @@ function getCategoryIcon(category) {
 // ==============================
 fetch("data.json")
   .then(response => {
-    if (!response.ok) throw new Error("Не вдалося завантажити data.json — перевір шлях/файл.");
+    if (!response.ok) throw new Error("Не вдалося завантажити data.json.");
     return response.json();
   })
   .then(data => {
@@ -37,7 +37,7 @@ fetch("data.json")
   })
   .catch(err => {
     console.error("Помилка при завантаженні data.json:", err);
-    listContainer.innerHTML = `<div style="color:#f88;padding:15px;">Помилка: не вдалось завантажити список (дивись консоль F12).</div>`;
+    listContainer.innerHTML = `<div style="color:#f88;padding:15px;">Помилка: не вдалось завантажити список.</div>`;
   });
 
 // ==============================
@@ -60,23 +60,32 @@ function renderAll(data) {
         <b>${escapeHtml(item.name)}</b><br>
         <div class="address">${escapeHtml(item.address)}</div>
         <div class="cat"><strong>Категорія:</strong> ${escapeHtml(item.category)}</div>
-        ${item.site ? `<div class="site"><a href="${escapeAttr(item.site)}" target="_blank" rel="noopener">Перейти на сайт</a></div>` : ""}
+
+        ${item.instagram ? `<div><a href="${escapeAttr(item.instagram)}" target="_blank">Instagram</a></div>` : ''}
+        ${item.phone ? `<div><a href="tel:${escapeAttr(item.phone)}">Телефон</a></div>` : ''}
+        ${item.site ? `<div><a href="${escapeAttr(item.site)}" target="_blank">Сайт</a></div>` : ''}
       </div>
     `;
 
     listContainer.appendChild(entry);
 
-    // --- Якщо нема координат — це онлайн магазин, на карту не додаємо ---
+    // --- Якщо нема координат — це онлайн магазин (на карту не додаємо) ---
     if (item.lat == null || item.lng == null) return;
 
     // --- Створюємо маркер ---
     let marker = L.marker([Number(item.lat), Number(item.lng)]).addTo(map);
 
-    // --- Красивий кастомний popup ---
+    // --- Popup з соцмережами та телефоном ---
     marker.bindPopup(`
-      <div class="popup-title">${escapeHtml(item.name)}</div>
-      <div>${escapeHtml(item.address)}</div>
-      <div class="popup-category">Категорія: ${escapeHtml(item.category)}</div>
+      <div style="font-size:14px; line-height:1.4;">
+        <strong>${escapeHtml(item.name)}</strong><br>
+        ${escapeHtml(item.address)}<br>
+        <b>Категорія:</b> ${escapeHtml(item.category)}<br><br>
+
+        ${item.instagram ? `<a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">Instagram</a><br>` : ''}
+        ${item.phone ? `<a href="tel:${escapeAttr(item.phone)}" class="btn-link">Подзвонити</a><br>` : ''}
+        ${item.site ? `<a href="${escapeAttr(item.site)}" target="_blank" class="btn-link">Сайт</a><br>` : ''}
+      </div>
     `);
 
     allMarkers.push(marker);
@@ -114,14 +123,3 @@ function escapeAttr(url) {
   if (!url) return "";
   return url.replace(/"/g, "%22");
 }
-marker.bindPopup(`
-  <div style="font-size:14px; line-height:1.4;">
-    <strong>${escapeHtml(item.name)}</strong><br>
-    ${escapeHtml(item.address)}<br>
-    <b>Категорія:</b> ${escapeHtml(item.category)}<br><br>
-
-    ${item.instagram ? `<a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">Instagram</a><br>` : ''}
-    ${item.phone ? `<a href="tel:${escapeAttr(item.phone)}" class="btn-link">Подзвонити</a><br>` : ''}
-    ${item.site ? `<a href="${escapeAttr(item.site)}" target="_blank" class="btn-link">Сайт</a><br>` : ''}
-  </div>
-`);
