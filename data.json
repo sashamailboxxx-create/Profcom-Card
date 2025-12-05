@@ -20,7 +20,6 @@
     "lat": 49.7140,
     "lng": 33.5710
   },
-
   {
     "name": "АЗС Автотранс — Вавілова 1а",
     "address": "м. Полтава, вул. Вавілова, 1а",
@@ -155,23 +154,23 @@
     "lng": 33.02833
   },
   {
-  "name": "Syaivo v domi",
-  "address": "Онлайн-магазин",
-  "category": "Онлайн-магазин",
-  "phone": "097 463 22 98",
-  "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
-  "lat": null,
-  "lng": null
-},
-{
-  "name": "Золоте Копитце (сири)",
-  "address": "Онлайн-магазин",
-  "category": "Онлайн-магазин",
-  "contact_person": "Олена",
-  "phone": "097 444 75 18",
-  "website": "https://zolotoe-kopytse.com.ua",
-  "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
-  "lat": null,
-  "lng": null
-},
+    "name": "Syaivo v domi",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазин",
+    "phone": "097 463 22 98",
+    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Золоте Копитце (сири)",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазин",
+    "contact_person": "Олена",
+    "phone": "097 444 75 18",
+    "website": "https://zolotoe-kopytse.com.ua",
+    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
+    "lat": null,
+    "lng": null
+  }
 ]
