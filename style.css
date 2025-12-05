@@ -1,76 +1,16 @@
+/* ===== ГЛОБАЛЬНІ СТИЛІ ===== */
 body {
   margin: 0;
-  background: #0f0f0f;
-  font-family: Arial, sans-serif;
-  color: #fff;
-}
-
-header {
-  text-align: center;
-  padding: 25px 10px;
-  background: #181818;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.filter-container {
-  padding: 15px;
-  background: #151515;
-  display: flex;
-  justify-content: center;
-}
-
-select {
-  padding: 10px 15px;
-  background: #222;
-  color: white;
-  border: 1px solid #444;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-#map {
-  height: 500px;
-  width: 100%;
-}
-
-.list-title {
-  text-align: center;
-  margin-top: 25px;
-}
-
-#list {
-  padding: 15px;
-}
-
-.item {
-  background: #181818;
-  border: 1px solid #333;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.item b {
-  color: #4fa3ff;
-}
-/* Основний фон */
-body {
-  margin: 0;
-  background: #0c1020; /* темно-синій фон */
+  background: #0c1020;
   font-family: Arial, sans-serif;
   color: #e6e6e6;
 }
 
-/* Шапка */
+/* ===== ШАПКА ===== */
 header {
   text-align: center;
   padding: 25px 10px;
-  background: #0a0e1a; /* глибокий синій */
+  background: #0a0e1a;
   box-shadow: 0 3px 15px rgba(0,0,0,0.6);
   border-bottom: 1px solid rgba(80,120,255,0.2);
 }
@@ -81,7 +21,7 @@ header h1 {
   color: #dce6ff;
 }
 
-/* Контейнер фільтра */
+/* ===== ФІЛЬТР ===== */
 .filter-container {
   padding: 15px;
   background: #0a0e1a;
@@ -90,10 +30,9 @@ header h1 {
   border-bottom: 1px solid rgba(80,120,255,0.15);
 }
 
-/* Select — ТЕМНО-СИНІЙ СТИЛЬ */
 select {
   padding: 12px 18px;
-  background: #1a2440; 
+  background: #1a2440;
   color: #dce6ff;
   border: 1px solid #3b4f8f;
   border-radius: 8px;
@@ -108,14 +47,14 @@ select:hover {
   border-color: #5a78d1;
 }
 
-/* Карта */
+/* ===== КАРТА ===== */
 #map {
   height: 500px;
   width: 100%;
   border-top: 1px solid rgba(80,120,255,0.15);
 }
 
-/* Тайтл списку */
+/* ===== СПИСОК ===== */
 .list-title {
   text-align: center;
   margin-top: 25px;
@@ -123,32 +62,11 @@ select:hover {
   font-size: 22px;
 }
 
-/* Список */
 #list {
   padding: 15px;
 }
 
-/* Картка елемента */
-.item {
-  background: #121a33; 
-  border: 1px solid rgba(80,120,255,0.25);
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  transition: 0.25s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
-}
-
-.item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
-}
-
-/* Виділення назви */
-.item b {
-  color: #7ab0ff;
-  font-size: 17px;
-}
+/* ===== КАРТКА ЕЛЕМЕНТА ===== */
 .item {
   background: #121a33;
   border: 1px solid rgba(80,120,255,0.25);
@@ -162,7 +80,17 @@ select:hover {
   gap: 15px;
 }
 
-/* Іконка категорії */
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
+}
+
+.item b {
+  color: #7ab0ff;
+  font-size: 18px;
+}
+
+/* ===== ІКОНКА КАТЕГОРІЇ ===== */
 .item-icon {
   width: 42px;
   height: 42px;
@@ -176,41 +104,12 @@ select:hover {
   flex-shrink: 0;
 }
 
-/* Контент праворуч */
+/* ===== ВМІСТ КАРТКИ ===== */
 .item-content {
   flex: 1;
 }
 
-.item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
-}
-
-.item b {
-  color: #7ab0ff;
-  font-size: 18px;
-}
-
-.telegram-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #0088cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: 0.2s ease;
-  box-shadow: 0 3px 10px rgba(0, 136, 204, 0.4);
-}
-
-.telegram-btn:hover {
-  background: #0099e6;
-  box-shadow: 0 5px 12px rgba(0, 136, 204, 0.55);
-}
-
-/* Кругла Telegram кнопка */
+/* ===== TELEGRAM BUTTON ===== */
 .tg-circle {
   margin-top: 15px;
   display: inline-flex;
@@ -230,7 +129,7 @@ select:hover {
 .tg-circle img {
   width: 28px;
   height: 28px;
-  filter: brightness(0) invert(1); /* Біла іконка */
+  filter: brightness(0) invert(1);
 }
 
 .tg-circle:hover {
@@ -239,6 +138,7 @@ select:hover {
   box-shadow: 0 6px 15px rgba(0, 136, 204, 0.55);
 }
 
+/* ===== POPUP ===== */
 .leaflet-popup-content-wrapper {
   background: #0e1b34 !important;
   color: #fff !important;
