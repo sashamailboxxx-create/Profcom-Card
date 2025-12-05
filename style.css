@@ -190,3 +190,23 @@ select:hover {
   color: #7ab0ff;
   font-size: 18px;
 }
+
+.telegram-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #0088cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 10px rgba(0, 136, 204, 0.4);
+}
+
+.telegram-btn:hover {
+  background: #0099e6;
+  box-shadow: 0 5px 12px rgba(0, 136, 204, 0.55);
+}
+
