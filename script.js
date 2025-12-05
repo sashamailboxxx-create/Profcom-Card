@@ -78,13 +78,26 @@ function renderAll(data) {
     // --- Popup з соцмережами та телефоном ---
     marker.bindPopup(`
       <div style="font-size:14px; line-height:1.4;">
-        <strong>${escapeHtml(item.name)}</strong><br>
+        <strong class="popup-title">${escapeHtml(item.name)}</strong><br>
         ${escapeHtml(item.address)}<br>
-        <b>Категорія:</b> ${escapeHtml(item.category)}<br><br>
+        <span class="popup-category">${escapeHtml(item.category)}</span><br><br>
 
-        ${item.instagram ? `<a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">Instagram</a><br>` : ''}
-        ${item.phone ? `<a href="tel:${escapeAttr(item.phone)}" class="btn-link">Подзвонити</a><br>` : ''}
-        ${item.site ? `<a href="${escapeAttr(item.site)}" target="_blank" class="btn-link">Сайт</a><br>` : ''}
+        ${item.instagram ? `
+            <a href="${escapeAttr(item.instagram)}" 
+               target="_blank" 
+               class="popup-btn popup-btn-instagram">Instagram</a>` 
+            : ''}
+
+        ${item.phone ? `
+            <a href="tel:${escapeAttr(item.phone)}" 
+               class="popup-btn popup-btn-phone">Подзвонити</a>` 
+            : ''}
+
+        ${item.site ? `
+            <a href="${escapeAttr(item.site)}" 
+               target="_blank" 
+               class="popup-btn popup-btn-site">Сайт</a>` 
+            : ''}
       </div>
     `);
 
