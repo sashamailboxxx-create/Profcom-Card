@@ -149,3 +149,44 @@ select:hover {
   color: #7ab0ff;
   font-size: 17px;
 }
+.item {
+  background: #121a33;
+  border: 1px solid rgba(80,120,255,0.25);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* Іконка категорії */
+.item-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #1e2a4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #7ab0ff;
+  flex-shrink: 0;
+}
+
+/* Контент праворуч */
+.item-content {
+  flex: 1;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
+}
+
+.item b {
+  color: #7ab0ff;
+  font-size: 18px;
+}
