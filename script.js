@@ -49,7 +49,6 @@ function renderAll(data) {
   allMarkers = [];
 
   data.forEach(item => {
-
     // --- Рендер списку ---
     const entry = document.createElement("div");
     entry.className = "item";
@@ -62,33 +61,33 @@ function renderAll(data) {
         <div class="cat"><strong>Категорія:</strong> ${escapeHtml(item.category)}</div>
 
         ${item.instagram ? `
-            <a href="${escapeAttr(item.instagram)}" 
-               target="_blank" 
-               class="btn-link"><span class="icon">📸</span> Instagram</a>` 
-            : ''}
-
-        ${item.phone ? `
-            <a href="tel:${escapeAttr(item.phone)}" 
-               class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
-            : ''}
+          <a href="${escapeAttr(item.instagram)}" 
+             target="_blank" 
+             class="btn-link"><span class="icon">📸</span> Instagram</a>` 
+        : ''}
 
         ${item.site ? `
-            <a href="${escapeAttr(item.site)}" 
-               target="_blank" 
-               class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
-            : ''}
+          <a href="${escapeAttr(item.site)}" 
+             target="_blank" 
+             class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
+        : ''}
+
+        ${item.phone ? `
+          <a href="tel:${escapeAttr(item.phone)}" 
+             class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
+        : ''}
       </div>
     `;
 
     listContainer.appendChild(entry);
 
-    // --- Якщо нема координат — це онлайн магазин (на карту не додаємо) ---
+    // --- Якщо нема координат — не додаємо на карту ---
     if (item.lat == null || item.lng == null) return;
 
     // --- Створюємо маркер ---
     let marker = L.marker([Number(item.lat), Number(item.lng)]).addTo(map);
 
-    // --- Popup з соцмережами та телефоном ---
+    // --- Popup з правильним порядком ---
     marker.bindPopup(`
       <div style="font-size:14px; line-height:1.4;">
         <strong class="popup-title">${escapeHtml(item.name)}</strong><br>
@@ -96,21 +95,21 @@ function renderAll(data) {
         <span class="popup-category">${escapeHtml(item.category)}</span><br><br>
 
         ${item.instagram ? `
-            <a href="${escapeAttr(item.instagram)}" 
-               target="_blank" 
-               class="btn-link"><span class="icon">📸</span> Instagram</a><br>` 
-            : ''}
+          <a href="${escapeAttr(item.instagram)}" 
+             target="_blank" 
+             class="btn-link"><span class="icon">📸</span> Instagram</a><br>` 
+        : ''}
 
-            ${item.site ? `
-            <a href="${escapeAttr(item.site)}" 
-               target="_blank" 
-               class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
-            : ''}
+        ${item.site ? `
+          <a href="${escapeAttr(item.site)}" 
+             target="_blank" 
+             class="btn-link"><span class="icon">🌐</span> Сайт</a><br>` 
+        : ''}
 
         ${item.phone ? `
-            <a href="tel:${escapeAttr(item.phone)}" 
-               class="btn-link"><span class="icon">📞</span> Подзвонити</a><br>` 
-            : ''}
+          <a href="tel:${escapeAttr(item.phone)}" 
+             class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
+        : ''}
       </div>
     `);
 
