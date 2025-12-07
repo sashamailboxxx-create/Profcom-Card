@@ -101,15 +101,15 @@ function renderAll(data) {
                class="btn-link"><span class="icon">📸</span> Instagram</a><br>` 
             : ''}
 
-        ${item.phone ? `
-            <a href="tel:${escapeAttr(item.phone)}" 
-               class="btn-link"><span class="icon">📞</span> Подзвонити</a><br>` 
-            : ''}
-
-        ${item.site ? `
+            ${item.site ? `
             <a href="${escapeAttr(item.site)}" 
                target="_blank" 
                class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
+            : ''}
+
+        ${item.phone ? `
+            <a href="tel:${escapeAttr(item.phone)}" 
+               class="btn-link"><span class="icon">📞</span> Подзвонити</a><br>` 
             : ''}
       </div>
     `);
