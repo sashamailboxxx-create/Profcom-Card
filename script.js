@@ -49,7 +49,6 @@ function renderAll(data) {
   allMarkers = [];
 
   data.forEach(item => {
-    // --- Рендер списку ---
     const entry = document.createElement("div");
     entry.className = "item";
 
@@ -58,58 +57,67 @@ function renderAll(data) {
       <div class="item-content">
         <b>${escapeHtml(item.name)}</b><br>
         <div class="address">${escapeHtml(item.address)}</div>
-        <div class="cat"><strong>Категорія:</strong> ${escapeHtml(item.category)}</div>
+        <div class="cat">
+          <strong>Категорія:</strong> ${escapeHtml(item.category)}
+        </div>
 
-        ${item.instagram ? `
-          <a href="${escapeAttr(item.instagram)}" 
-             target="_blank" 
-             class="btn-link"><span class="icon">📸</span> Instagram</a>` 
-        : ''}
+        <div class="contact-box">
 
-        ${item.site ? `
-          <a href="${escapeAttr(item.site)}" 
-             target="_blank" 
-             class="btn-link"><span class="icon">🌐</span> Сайт</a>` 
-        : ''}
+          ${item.instagram ? `
+            <a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">
+              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+              Instagram
+            </a>
+          ` : ''}
 
-        ${item.phone ? `
-          <a href="tel:${escapeAttr(item.phone)}" 
-             class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
-        : ''}
+          ${item.phone ? `
+            <a href="tel:${escapeAttr(item.phone)}" class="btn-link">
+              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png">
+              ${item.phone}
+            </a>
+          ` : ''}
+
+          ${item.site ? `
+            <a href="${escapeAttr(item.site)}" target="_blank" class="btn-site">
+              Відкрити сайт
+            </a>
+          ` : ''}
+        </div>
       </div>
     `;
 
     listContainer.appendChild(entry);
 
     // --- Якщо нема координат — не додаємо на карту ---
-    if (item.lat == null || item.lng == null) return;
+    if (!item.lat || !item.lng) return;
 
-    // --- Створюємо маркер ---
     let marker = L.marker([Number(item.lat), Number(item.lng)]).addTo(map);
 
-    // --- Popup з правильним порядком ---
     marker.bindPopup(`
       <div style="font-size:14px; line-height:1.4;">
-        <strong class="popup-title">${escapeHtml(item.name)}</strong><br>
+        <strong>${escapeHtml(item.name)}</strong><br>
         ${escapeHtml(item.address)}<br>
-        <span class="popup-category">${escapeHtml(item.category)}</span><br><br>
+        <span style="color:#555">${escapeHtml(item.category)}</span><br><br>
 
         ${item.instagram ? `
-          <a href="${escapeAttr(item.instagram)}" 
-             target="_blank" 
-             class="btn-link"><span class="icon">📸</span> Instagram</a><br>` 
-        : ''}
-
-        ${item.site ? `
-          <a href="${escapeAttr(item.site)}" 
-             target="_blank" 
-             class="btn-link"><span class="icon">🌐</span> Сайт</a><br>` 
-        : ''}
+          <a href="${escapeAttr(item.instagram)}" target="_blank" class="btn-link">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+            Instagram
+          </a><br>
+        ` : ''}
 
         ${item.phone ? `
-          <a href="tel:${escapeAttr(item.phone)}" 
-             class="btn-link"><span class="icon">📞</span> Подзвонити</a>` 
-        : ''}
+          <a href="tel:${escapeAttr(item.phone)}" class="btn-link">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png">
+            Подзвонити
+          </a><br>
+        ` : ''}
+
+        ${item.site ? `
+          <a href="${escapeAttr(item.site)}" target="_blank" class="btn-site" style="margin-top:5px;display:inline-block;">
+            Відкрити сайт
+          </a>
+        ` : ''}
       </div>
     `);
 
@@ -118,33 +126,29 @@ function renderAll(data) {
 }
 
 // ==============================
-//  Фільтрація по категорії
+//  Фільтрація
 // ==============================
 categoryFilter.addEventListener("change", () => {
   const selected = categoryFilter.value;
 
-  const filtered =
-    selected === "all"
-      ? loadedData
-      : loadedData.filter(item => item.category === selected);
+  const filtered = selected === "all"
+    ? loadedData
+    : loadedData.filter(item => item.category === selected);
 
   renderAll(filtered);
 });
 
 // ==============================
-//  Функції безпеки тексту
+//  Безпечний текст
 // ==============================
 function escapeHtml(str) {
-  if (!str && str !== 0) return "";
+  if (!str) return "";
   return String(str)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    .replaceAll(">", "&gt;");
 }
 
 function escapeAttr(url) {
-  if (!url) return "";
-  return url.replace(/"/g, "%22");
+  return url ? url.replace(/"/g, "%22") : "";
 }
