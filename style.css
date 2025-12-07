@@ -231,3 +231,46 @@ select:hover {
 .btn-link span.icon {
     font-size: 16px;
 }
+
+
+
+
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+  padding: 8px 12px;
+  background: #eef2ff;
+  border: 1px solid #ccd6ff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: 0.25s;
+}
+
+.btn-link:hover {
+  background: #dfe7ff;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-site {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #4b7bec;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn-site:hover {
+  background: #3867d6;
+}
