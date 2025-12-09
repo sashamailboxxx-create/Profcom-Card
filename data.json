@@ -394,17 +394,18 @@
     "category": "Онлайн-магазини",
     "contact_person": "Олена",
     "phone": "+380974447518",
-    "website": "https://zolotoe-kopytse.com.ua",
+    "site": "https://zolotoe-kopytse.com.ua",
     "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
     "lat": null,
     "lng": null
-  },{
+  },
+  {
     "name": "Натуральна косметика - Dushka Cosmetics знижка 10%",
     "address": "Онлайн-магазин",
     "category": "Онлайн-магазини",
     "contact_person": "",
     "phone": "+380500304050",
-    "website": "",
+    "site": "",
     "instagram": "https://www.instagram.com/dushka_cosmetics?igsh=MXd5ZXpsZDB1dm92aQ%3D%3D",
     "lat": null,
     "lng": null
@@ -415,7 +416,7 @@
     "category": "Онлайн-магазини",
     "contact_person": "",
     "phone": "0800212521",
-    "website": "https://zdravica.ua/",
+    "site": "https://zdravica.ua/",
     "instagram": "",
     "lat": null,
     "lng": null
