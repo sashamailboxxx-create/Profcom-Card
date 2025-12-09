@@ -658,5 +658,75 @@
     "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
     "lat": null,
     "lng": null
-  }
+  },
+  {
+    "name": "А/п №3 Аптеки №2 «Добрі ліки» — м. Лубни, ",
+    "address": "м. Лубни, вулиця П’ятикопа, 1а, 1 поверх",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.00370688249664,
+    "lng": 32.9942704125267 
+  },
+  {
+    "name": "А/п №4 Аптеки №2 «Добрі ліки» — м. Лубни, знижка 3%",
+    "address": "м. Лубни, вулиця П’ятикопа, 26",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.001412630398846,
+    "lng": 32.99162186217238
+  },
+  {
+    "name": "Аптека № 1 «Добрі ліки» — м. Лубни, знижка 3%",
+    "address": "м. Лубни, проспект Володимирський, 1/5",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.012746454355224,
+    "lng": 33.00289934494388
+  },
+  {
+    "name": "Аптека № 2 «Добрі ліки» — м. Лубни, знижка 3%",
+    "address": "м. Лубни, проспект Володимирський, 50",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.01807387446357,
+    "lng": 32.996425712142056
+  },
+  {
+    "name": "Аптека № 221 «Добрі ліки» — Чорнуи, знижка 3%",
+    "address": "Чорнухи, вулиця Центральна, 26",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.26791022378989,
+    "lng": 32.93105556591723
+  },
+  {
+    "name": "Аптека № 258 «Добрі ліки» — Гребінка, знижка 3%",
+    "address": "Гребінка, вулиця Магістральна, 64",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.12071905949546,
+    "lng": 32.433641527776366
+  },
+  {
+    "name": "Аптека № 322 «Добрі ліки» — Гребінка, знижка 3%",
+    "address": "Гребінка, вул.Євгена Гребінки 4Д",
+    "instagram": "",
+    "site": "https://zdravica.ua/apteki-dobri-liki",
+    "phone": "0800212521",
+    "category": "Аптека",
+    "lat": 50.118157366709,
+    "lng": 32.4388618416764
+  },
 ]
