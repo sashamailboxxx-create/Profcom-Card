@@ -380,6 +380,47 @@
     "lng": 35.13866481043628
    },
   {
+    "name": "Syaivo v domi знижка 10%",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазини",
+    "phone": "+380974632298",
+    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Сири - Золоте Копитце знижка 15%",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазини",
+    "contact_person": "Олена",
+    "phone": "+380974447518",
+    "website": "https://zolotoe-kopytse.com.ua",
+    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
+    "lat": null,
+    "lng": null
+  },{
+    "name": "Натуральна косметика - Dushka Cosmetics знижка 10%",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазини",
+    "contact_person": "",
+    "phone": "+380500304050",
+    "website": "",
+    "instagram": "https://www.instagram.com/dushka_cosmetics?igsh=MXd5ZXpsZDB1dm92aQ%3D%3D",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "ІНТЕРНЕТ-АПТЕКА «ЗДРАВИЦЯ» знижка 3%",
+    "address": "Онлайн-магазин",
+    "category": "Онлайн-магазини",
+    "contact_person": "",
+    "phone": "0800212521",
+    "website": "https://zdravica.ua/",
+    "instagram": "",
+    "lat": null,
+    "lng": null
+  },
+  {
     "name": "АЗС Автотранс — Вавілова 1а, знижка 3 грн/л на бензини-дизель та 1,20 грн/л на газ",
     "address": "м. Полтава, вул. Вавілова, 1а",
     "instagram": "",
@@ -638,26 +679,6 @@
     "category": "АЗС",
     "lat": 50.2391819673914, 
     "lng": 32.89337787708288 
-  },
-  {
-    "name": "Syaivo v domi",
-    "address": "Онлайн-магазин",
-    "category": "Онлайн-магазини",
-    "phone": "097 463 22 98",
-    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
-    "lat": null,
-    "lng": null
-  },
-  {
-    "name": "Золоте Копитце (сири)",
-    "address": "Онлайн-магазин",
-    "category": "Онлайн-магазини",
-    "contact_person": "Олена",
-    "phone": "097 444 75 18",
-    "website": "https://zolotoe-kopytse.com.ua",
-    "instagram": "https://www.instagram.com/syaivo_v_domi?igsh=MXI2ZjM4eXVhMmtnNg==",
-    "lat": null,
-    "lng": null
   },
   {
     "name": "А/п №3 Аптеки №2 «Добрі ліки» — м. Лубни, ",
