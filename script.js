@@ -102,10 +102,15 @@ function renderAll(data) {
     // ==============================
     //  🔹 НОВЕ: клік по партнеру → карта
     // ==============================
-    entry.addEventListener("click", () => {
-      map.setView([item.lat, item.lng], 15, { animate: true });
-      marker.openPopup();
-    });
+entry.addEventListener("click", () => {
+  map.setView([item.lat, item.lng], 15, { animate: true });
+
+  // ⬆️ Зсув карти вгору, щоб маркер був по центру
+  setTimeout(() => {
+    map.panBy([0, -150], { animate: true });
+    marker.openPopup();
+  }, 300);
+});
   });
 }
 
