@@ -255,3 +255,10 @@ select {
   text-decoration: underline;
 }
 
+
+
+.leaflet-popup-content i {
+  color: #4da3ff;
+  margin-right: 6px;
+}
+
