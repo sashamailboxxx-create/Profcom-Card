@@ -1,7 +1,9 @@
 /* =========================
-   ГЛОБАЛЬНІ СТИЛІ
+   RESET + BASE
 ========================= */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -13,136 +15,103 @@ body {
 }
 
 /* =========================
-   ШАПКА
+   HEADER
 ========================= */
 header {
   text-align: center;
-  padding: 25px 10px;
+  padding: 22px 10px;
   background: #0a0e1a;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.6);
   border-bottom: 1px solid rgba(80,120,255,0.2);
 }
 
 header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
   color: #dce6ff;
 }
 
 /* =========================
-   ФІЛЬТР
+   FILTER
 ========================= */
 .filter-container {
-  padding: 15px;
+  padding: 12px;
   background: #0a0e1a;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgba(80,120,255,0.15);
 }
 
 select {
-  padding: 12px 18px;
+  padding: 10px 16px;
   background: #1a2440;
   color: #dce6ff;
   border: 1px solid #3b4f8f;
   border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-select:hover {
-  background: #22315c;
-  border-color: #5a78d1;
+  font-size: 15px;
 }
 
 /* =========================
-   КАРТА
+   MAP
 ========================= */
 #map {
-  height: 500px;
+  height: 420px;
   width: 100%;
-  border-top: 1px solid rgba(80,120,255,0.15);
 }
 
 /* =========================
-   СПИСОК / СІТКА
+   LIST TITLE
 ========================= */
 .list-title {
   text-align: center;
-  margin: 25px 0 10px;
+  margin: 20px 0 10px;
+  font-size: 20px;
   color: #c8d4ff;
-  font-size: 22px;
-}
-
-#list {
-  padding: 15px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-/* Планшети */
-@media (max-width: 1100px) {
-  #list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* Телефони */
-@media (max-width: 700px) {
-  #list {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* =========================
-   КАРТКА
+   LIST — MOBILE FIRST
+========================= */
+#list {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr; /* 📱 ЗАВЖДИ 1 НА МОБІЛЦІ */
+  gap: 14px;
+}
+
+/* =========================
+   CARD
 ========================= */
 .item {
   background: #121a33;
   border: 1px solid rgba(80,120,255,0.25);
-  padding: 18px;
   border-radius: 12px;
-  transition: 0.25s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
-
+  padding: 16px;
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
-
-  height: 100%;
+  gap: 14px;
   cursor: pointer;
-}
-
-.item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 18px rgba(40,80,180,0.35);
 }
 
 .item b {
   color: #7ab0ff;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 /* =========================
-   ІКОНКА
+   ICON
 ========================= */
 .item-icon {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   background: #1e2a4d;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  color: #7ab0ff;
+  font-size: 20px;
   flex-shrink: 0;
 }
 
 /* =========================
-   ВМІСТ
+   CONTENT
 ========================= */
 .item-content {
   flex: 1;
@@ -151,66 +120,79 @@ select:hover {
 .address {
   font-size: 14px;
   opacity: 0.85;
-  margin: 6px 0;
+  margin: 4px 0;
 }
 
 .cat {
   font-size: 13px;
   opacity: 0.8;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* =========================
-   КНОПКИ
+   BUTTONS
 ========================= */
 .btn-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: #1e2a44;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
+  font-size: 13px;
   color: #8cbcff;
-  font-weight: 500;
-  font-size: 14px;
   text-decoration: none;
-  transition: 0.2s ease;
-  margin-right: 6px;
-}
-
-.btn-link:hover {
-  background: #274065;
-  color: #ffffff;
 }
 
 /* =========================
-   POPUP LEAFLET
+   TELEGRAM BUTTON — MOBILE
+========================= */
+.tg-circle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 28px;
+}
+
+.tg-circle img {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+  #list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #map {
+    height: 460px;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+  #list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #map {
+    height: 520px;
+  }
+}
+
+/* =========================
+   LEAFLET POPUP
 ========================= */
 .leaflet-popup-content-wrapper {
   background: #0e1b34 !important;
-  color: #fff !important;
   border-radius: 12px;
   border: 1px solid #1f3b70;
 }
-
-.leaflet-popup-tip {
-  background: #0e1b34 !important;
-  border: 1px solid #1f3b70 !important;
-}
-
-/* ===== Telegram кнопка — мобільна оптимізація ===== */
-@media (max-width: 700px) {
-  .tg-circle {
-    padding: 8px 14px;
-    font-size: 14px;
-    gap: 8px;
-    border-radius: 32px;
-  }
-
-  .tg-circle img {
-    width: 22px;
-    height: 22px;
-    padding: 3px;
-  }
-}
-
