@@ -249,3 +249,34 @@ select:hover {
   background: #1565c0;
 }
 
+
+
+
+
+
+/* ===== СІТКА ПАРТНЕРІВ (3 стовпчики) ===== */
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Планшети */
+@media (max-width: 1100px) {
+  #list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Телефони */
+@media (max-width: 700px) {
+  #list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  height: 100%;
+}
+
