@@ -262,3 +262,50 @@ select {
   margin-right: 6px;
 }
 
+
+
+
+
+
+/* ICON HOVER ANIMATION */
+.item-icon {
+  transition: 
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.item:hover .item-icon {
+  transform: scale(1.12) rotate(-3deg);
+  background: linear-gradient(135deg, #2aabee, #3b6cff);
+  box-shadow: 0 6px 18px rgba(58, 124, 255, 0.45);
+}
+
+/* CARD HOVER EFFECT */
+.item {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(90, 140, 255, 0.6);
+  box-shadow:
+    0 10px 30px rgba(30, 60, 140, 0.45);
+}
+
+/* BUTTON HOVER */
+.btn-link {
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-link:hover {
+  transform: translateY(-1px);
+  background: #2a3b6b;
+  box-shadow: 0 4px 14px rgba(60,120,255,0.35);
+}
