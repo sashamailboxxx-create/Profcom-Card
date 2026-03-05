@@ -1833,5 +1833,15 @@
     "category": "Магазин",
     "lat": 49.455515833788084,
     "lng": 35.139566747640345
+  },
+  {
+    "name": "Ресторан «Komora Kitchen» знижка 10% крім алкоголю",
+    "address": "м. Полтава, вул. Пилипа Орлика, 29",
+    "instagram": "https://www.instagram.com/komora.kitchen?igsh=aGl5NjNiankwNDV0",
+     "site": "https://www.komora.kitchen/ua",
+    "phone": "+380504257722",
+    "category": "Ресторан",
+    "lat": 49.5893360932367, 
+    "lng": 34.55788552126885
   }
 ]
