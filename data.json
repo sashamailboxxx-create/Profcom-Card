@@ -1843,5 +1843,14 @@
     "category": "Ресторан",
     "lat": 49.5893360932367, 
     "lng": 34.55788552126885
+  },
+  {
+    "name": "Магазин одягу «Ідеал» знижка 5%",
+    "address": "м. Лубни, пр-т Володимирський, 21",
+    "instagram": "https://www.instagram.com/ideal.lubny?igsh=MXZ4MHF6eDhnNGJqaA%3D%3D&utm_source=qr",
+    "phone": "+380506279216",
+    "category": "Магазин",
+    "lat": 50.014930205375585,
+    "lng": 33.00127880990136
   }
 ]
