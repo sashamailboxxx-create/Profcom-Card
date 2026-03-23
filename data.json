@@ -1892,5 +1892,25 @@
     "category": "Магазин",
     "lat": 50.01421371504669, 
     "lng": 33.000241055701295
+  },
+  {
+    "name": "Мережа ювелірних салонів  «Золотинка» - знижка 7% на товар",
+    "address": "м. Миргород, вул. Гоголя, 127/1 ",
+    "instagram": "https://www.instagram.com/zolotynka.jewelry?igsh=MWxwc2Nncnowdmc4cg==",
+    "site": "https://zolotynka.com.ua",
+    "phone": "+380952380723",
+    "category": "Магазин",
+    "lat": 49.963495864364305,
+    "lng": 33.61050384673033
+  },
+  {
+    "name": "Мережа ювелірних салонів  «Золотинка» - знижка 7% на товар",
+    "address": "м. Миргород, вул. Воскресенська, 2-б ",
+    "instagram": "https://www.instagram.com/zolotynka.jewelry?igsh=MWxwc2Nncnowdmc4cg==",
+    "site": "https://zolotynka.com.ua",
+    "phone": "+380952380723",
+    "category": "Магазин",
+    "lat": 49.9670318385015,
+    "lng": 33.607129432717045
   }
 ]
