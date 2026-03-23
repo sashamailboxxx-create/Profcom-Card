@@ -1862,5 +1862,35 @@
     "category": "Ресторан",
     "lat": 49.446236077175044, 
     "lng": 34.88333272593757
+  },
+  {
+    "name": "Мережа ювелірних салонів  «Золотинка» - знижка 7% на товар",
+    "address": "м. Лубни, проспект Володимирський, 4 ",
+    "instagram": "https://www.instagram.com/zolotynka.jewelry?igsh=MWxwc2Nncnowdmc4cg==",
+    "site": "https://zolotynka.com.ua",
+    "phone": "+380952380723",
+    "category": "Магазин",
+    "lat": 50.01179684158151, 
+    "lng": 33.0039688432333
+  },
+  {
+    "name": "Мережа ювелірних салонів  «Золотинка» - знижка 7% на товар",
+    "address": "м. Лубни, проспект Володимирський, 42/1а ",
+    "instagram": "https://www.instagram.com/zolotynka.jewelry?igsh=MWxwc2Nncnowdmc4cg==",
+    "site": "https://zolotynka.com.ua",
+    "phone": "+380952380723",
+    "category": "Магазин",
+    "lat": 50.017463981020626,
+    "lng": 32.99940454159629
+  },
+  {
+    "name": "Мережа ювелірних салонів  «Золотинка» - знижка 7% на товар",
+    "address": "м. Лубни, вул. Ярослава Мудрого, 46 ",
+    "instagram": "https://www.instagram.com/zolotynka.jewelry?igsh=MWxwc2Nncnowdmc4cg==",
+    "site": "https://zolotynka.com.ua",
+    "phone": "+380952380723",
+    "category": "Магазин",
+    "lat": 50.01421371504669, 
+    "lng": 33.000241055701295
   }
 ]
