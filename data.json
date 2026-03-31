@@ -1912,5 +1912,25 @@
     "category": "Магазин",
     "lat": 49.9670318385015,
     "lng": 33.607129432717045
+  },
+  {
+    "name": "Магазин  «Mantia Kids» - знижка 15% на прокат",
+    "address": "м. Полтава ",
+    "instagram": "https://www.instagram.com/mantia.kids.ua?igsh=MTU0ZmllZmwwb2VvNg%3D%3D&utm_source=qr",
+    "site": "",
+    "phone": "+380966160560",
+    "category": "Магазин",
+    "lat": 49.5896201644879,
+    "lng": 34.551015825017544
+  },
+  {
+    "name": "Агромагазин  «Дім Сад Город» - знижка 3% на товар",
+    "address": "м. Карлівка, вул. Успенська, 1А ",
+    "instagram": "",
+    "site": "",
+    "phone": "",
+    "category": "Магазин",
+    "lat": 49.45445149592801,
+    "lng": 35.13855016998558
   }
 ]
