@@ -46,6 +46,16 @@
     "lng": 34.54466
   },
   {
+    "name": "ШАРландія | Преміум кульки Полтава  знижка 10% на чек",
+    "address": "м. Полтава, вул. Стрітенська, 38А",
+    "instagram": "https://www.instagram.com/sharlandiya_poltava?igsh=MXVweXZnbmJqdHRubQ==",
+    "site": "https://www.shariki.pl.ua/",
+    "phone": "+380997796821",
+    "category": "Магазин",
+    "lat": 49.58316463936153,
+    "lng": 34.55623021060226
+    },
+  {
     "name": "Лікувально-оздоровчий спа-комплекс «ПОЛО-МЕДЛАЙФ» - знижка  5%",
     "address": "м. Кременчук, вул. Героїв України, буд. 14 Г",
     "instagram": "https://www.instagram.com/polo_medlife/",
@@ -54,6 +64,26 @@
     "category": "Аптека",
     "lat": 49.134019663372776,
     "lng": 33.433414664524655
+  },
+  {
+    "name": "BOOST SPACE | Масаж  знижка 10% на послуги",
+    "address": "м. Полтава, Павленківська площа, 3Б",
+    "instagram": "https://www.instagram.com/boostspace.pl/",
+    "site": "",
+    "phone": "+380991413187",
+    "category": "Аптека",
+    "lat": 49.59993275947619,
+    "lng": 34.53395903671111
+  },
+   {
+    "name": "BOOST Coffee Club | Кав'ярня  знижка 10% на послуги",
+    "address": "м. Полтава, Павленківська площа, 3Б",
+    "instagram": "https://www.instagram.com/boost_coffee_club?igsh=dnRxbjFnZ3E5bmo0&utm_source=qr",
+    "site": "",
+    "phone": "",
+    "category": "Ресторан",
+    "lat": 49.60001098071112, 
+    "lng": 34.53404217828483
   },
   {
     "name": "«Автоточка знижка 3%»",
