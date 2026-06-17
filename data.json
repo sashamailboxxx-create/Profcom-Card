@@ -46,7 +46,7 @@
     "lng": 34.54466
   },
   {
-    "name": "ШАРландія | Преміум кульки Полтава  знижка 10% на чек",
+    "name": "ШАРландія | Преміум кульки Полтава  знижка 10% на чек, ",
     "address": "м. Полтава, вул. Стрітенська, 38А",
     "instagram": "https://www.instagram.com/sharlandiya_poltava?igsh=MXVweXZnbmJqdHRubQ==",
     "site": "https://www.shariki.pl.ua/",
@@ -54,6 +54,16 @@
     "category": "Магазин",
     "lat": 49.58316463936153,
     "lng": 34.55623021060226
+    },
+   {
+    "name": "Служба доставки Arena Sushi Полтава  знижка 20% на чек, знижка не поширюється на напої, соуси та сирні бортики",
+    "address": "м. Полтава, вул. Шевченка, 17А",
+    "instagram": "https://www.instagram.com/arenasushi_pl.ua?igsh=bGJqeGR4b2d5N2c1",
+    "site": "https://arenasushi.pl.ua/section:menyu/sushi-burgeri",
+    "phone": "+380989612858",
+    "category": "Ресторан",
+    "lat": 49.580832843353896,
+    "lng": 34.55554548046998
     },
   {
     "name": "Лікувально-оздоровчий спа-комплекс «ПОЛО-МЕДЛАЙФ» - знижка  5%",
@@ -76,7 +86,7 @@
     "lng": 34.53395903671111
   },
    {
-    "name": "BOOST Coffee Club | Кав'ярня  знижка 10% на послуги",
+    "name": "BOOST Coffee Club | Кав'ярня  знижка 10% на чек",
     "address": "м. Полтава, Павленківська площа, 3Б",
     "instagram": "https://www.instagram.com/boost_coffee_club?igsh=dnRxbjFnZ3E5bmo0&utm_source=qr",
     "site": "",
