@@ -1,4 +1,24 @@
 [
+   {
+    "name": "Мережа кінотеатрів Wizoria, ТРЦ «Конкорд», варість квитка 150 грн. за промокодом PROFCOM150 ",
+    "address": "м. Полтава, вулиця Європейська, 60А",
+    "instagram": "https://www.instagram.com/wizoria.ua/",
+    "site": "https://wizoria.ua/",
+    "phone": "",
+    "category": "Магазин",
+    "lat": 49.578462803525, 
+    "lng": 34.54069783862644
+  },
+  {
+    "name": "Мережа кінотеатрів Wizoria, ТЦ «Мир», варість квитка 120 грн. за промокодом PROFCOM120 ",
+    "address": "м. Миргород, вулиця Гоголя, 147 ",
+    "instagram": "https://www.instagram.com/wizoria.ua/",
+    "site": "https://wizoria.ua/",
+    "phone": "",
+    "category": "Магазин",
+    "lat": 49.96761433898777,
+    "lng": 33.60728590793966
+  },
   {
     "name": "Автомагазин VTK знижка 5-10%",
     "address": "Полтава, вул. Решетилівська (Маршала Бірюзова), 13",
